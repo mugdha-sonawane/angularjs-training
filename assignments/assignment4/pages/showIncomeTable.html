@@ -1,0 +1,29 @@
+<div class="row">
+<h4>Income </h4>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Payer</th>
+                <th>Payee</th>
+                <th>Category</th>
+                <th>Mode of Payment</th>
+                <th>Amount</th>
+                <th>Notes</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="inc in incomedata">
+                <th>{{inc.payer}}</th>
+                <td>{{inc.payee}}</td>
+                <td>{{inc.category}}</td>
+                <td>{{inc.ModeofPayment}}</td>
+                <td>{{inc.Amount}}</td>
+                <td>{{inc.Notes}}</td>
+                <td><a  ng-click="editRow(inc, $index)" ui-sref="editIncome">Edit</a></td>
+                <td><a ng-href="#" ng-click="removeRow(inc, $index)">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

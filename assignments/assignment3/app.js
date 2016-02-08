@@ -9,13 +9,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
 
+        // .state('home', {
+        //     url: '/home',
+        //     templateUrl: 'pages/home.html'
+        // })
         .state('home', {
             url: '/home',
-            templateUrl: 'pages/home.html'
-        })
-        .state('about', {
-            url: '/about',
-            templateUrl: 'pages/about.html',
+            templateUrl: 'pages/home.html',
             controller: function($scope, expense) {
 
                 $scope.editLocation = null;

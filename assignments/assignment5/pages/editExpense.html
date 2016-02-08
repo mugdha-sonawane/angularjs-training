@@ -1,0 +1,52 @@
+ <div class="row" ng-show="showEditExpense_Box">
+        <div class="inputbox" style="margin:0 auto;">
+            <h2>Edit Expense Details</h2>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-lg-12">
+                        <input type="text" class="form-control" placeholder="Payer" ng-model="data.exppayer">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-12">
+                        <input type="text" class="form-control" placeholder="Payee" ng-model="data.exppayee">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-12 customlabel">Category:</label>
+                    <div class="col-lg-12">
+                        <select class="form-control" ng-model="data.expcategory">
+                            <option>shopping</option>
+                            <option>loan</option>
+                            <option>bank</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-12 customlabel">Mode of Payment:</label>
+                    <div class="col-lg-12">
+                        <select class="form-control" ng-model="data.expmodeofpayment">
+                            <option>Bank</option>
+                            <option>Cash</option>
+                            <option>DD</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-12">
+                        <input type="text" class="form-control" placeholder="Amt" ng-model="data.expAmount">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-12">
+                        <input type="text" class="form-control" placeholder="Notes" ng-model="data.expnotes">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-lg-12">
+                        <button type="submit" class="btn btn-primary" ng-click="updateExpenseData(data)">Update Expense</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

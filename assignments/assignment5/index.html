@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>http request</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="app.js"></script>
+    <script src="js/expenseCtrl.js"></script>
+    <script src="services/expense.js"></script>
+    <!-- <script src="factory/expense_fac.js"></script>-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="customersCtrl">
+       <h1 class="expensetxt">Expense Management System</h1>
+             <div class="container">
+            <div class="row">
+                <div class="col-lg-4 txt_center">
+                    <h3>Total Income:{{totalincome}}</h3></div>
+                <div class="col-lg-4 txt_center">
+                    <h3>Total Expense:{{totalexpense}}</h3></div>
+                <div class="col-lg-4 txt_center">
+                    <h3>Total Balance:{{totalincome-totalexpense}}</h3></div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-lg-3 txt_center">
+                    <a ui-sref="showIncomeTable">
+                        <button type="button" class="btn btn-primary"> Show Income Table</button>
+                    </a>
+                </div>
+                <div class="col-lg-3 txt_center">
+                    <a ui-sref="showExpenseTable">
+                        <button type="button" class="btn btn-primary"> Show Expense Table</button>
+                    </a>
+                </div> 
+                <div class="col-lg-3 txt_center">
+                    <a ui-sref="addIncome">
+                        <button type="button" class="btn btn-primary"> Add Income</button>
+                    </a>
+                </div>
+                <div class="col-lg-3 txt_center">
+                    <a ui-sref="addExpense">
+                        <button type="button" class="btn btn-primary">Add Expense</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+            <!-- container -->
+      
+        <div id="content">
+            <div class="container">
+                <div class="view" ui-view style="width:100%;">
+                </div>
+                <div class="clearFix"></div>
+            </div>
+            <!--container view-->
+        </div>
+        <!--content-->
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>

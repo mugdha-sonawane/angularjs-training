@@ -1,0 +1,29 @@
+<div class="row">
+<h4>Expense </h4>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Payer</th>
+                <th>Payee</th>
+                <th>Category</th>
+                <th>Mode of Payment</th>
+                <th>Amount</th>
+                <th>Notes</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="exp in expensedata">
+                <th>{{exp.payer}}</th>
+                <td>{{exp.payee}}</td>
+                <td>{{exp.category}}</td>
+                <td>{{exp.ModeofPayment}}</td>
+                <td>{{exp.Amount}}</td>
+                <td>{{exp.Notes}}</td>
+                <td><a ng-click="editRow(exp, $index)" ui-sref="editExpense">Edit</a></td>
+                <td><a ng-href="#" ng-click="removeRow(exp, $index)">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
