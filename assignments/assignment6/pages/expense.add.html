@@ -1,0 +1,85 @@
+<div>
+<div class="row">
+    <div class="inputbox" style="margin:0 auto;">
+        <h2>Add Expense Details</h2>
+        <form class="form-horizontal" name="myForm" role="form" ng-submit="addExpenseData(userexpensedata)">
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <input type="text" name="payer" class="form-control" placeholder="Payer" ng-model="userexpensedata.payer" ng-maxlength="15" required>
+                    <div class="errormsg">
+                        <span class="error_msg" ng-show="myForm.payer.$error.maxlength">Maximum 15 characters allowed. </span>
+                        <span class="error_msg" ng-show="myForm.payer.$error.required && !myForm.payer.$pristine">Payer name is required.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <input type="text" name="payee" class="form-control" placeholder="Payee" ng-model="userexpensedata.payee" ng-maxlength="15" required>
+                      <div class="errormsg">
+                        <span class="error_msg" ng-show="myForm.payee.$error.maxlength">Maximum 15 characters allowed. </span>
+                        <span class="error_msg" ng-show="myForm.payee.$error.required && !myForm.payee.$pristine">Payee name is required.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-12 customlabel">Category:</label>
+                <div class="col-lg-12">
+                    <select class="form-control" name="category" ng-model="userexpensedata.category" required>
+                        <option>shopping</option>
+                        <option>loan</option>
+                        <option>bank</option>
+                    </select>
+                     <div class="errormsg">
+                        <span class="error_msg" ng-show="myForm.category.$error.required && !myForm.category.$pristine">PLease select Category</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+            <label class="control-label col-lg-12 customlabel">Date:</label>
+                <div class="col-lg-12">
+                    <input class="form-control" name="date" ng-model="userexpensedata.Date" type="date" placeholder="dd-mm-yyyy" required />
+                    <div class="errormsg">
+                        <span class="error_msg" ng-show="myForm.date.$error.required && !myForm.date.$pristine">Date is required.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-12 customlabel">Mode of Payment:</label>
+                <div class="col-lg-12">
+                    <select class="form-control" name="ModeofPayment" ng-model="userexpensedata.ModeofPayment" required>
+                        <option>Bank</option>
+                        <option>Cash</option>
+                        <option>DD</option>
+                    </select>
+                     <div class="errormsg">
+                        <span class="error_msg" ng-show="myForm.ModeofPayment.$error.required && !myForm.ModeofPayment.$pristine">PLease select Mode of Payment</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <input type="text" name="amount" class="form-control" placeholder="Amount" ng-model="userexpensedata.Amount" required>
+                    <div class="errormsg">
+                        <span class="error_msg" ng-show="myForm.amount.$error.required && !myForm.amount.$pristine">Please enter Number.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <input type="text" name="notes" class="form-control" placeholder="Notes" ng-model="userexpensedata.Notes" required>
+                     <div class="errormsg">
+                        <span class="error_msg" ng-show="myForm.notes.$error.required && !myForm.notes.$pristine">Please enter notes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-lg-12">
+                <button type="button" class="btn btn-primary" ui-sref="expense">Cancel</button>
+                   <!--  <button type="submit" class="btn btn-primary" ng-disabled="myForm.$invalid" ng-click="addExpenseData(userexpensedata)">Add Expense</button> -->
+                   <input type="submit" class="btn btn-primary" ngClick="Submit" value="Add Expense" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
