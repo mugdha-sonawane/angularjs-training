@@ -1,0 +1,26 @@
+<form class="form-horizontal" name="settingForm" role="form" ng-submit="submitMyForm(settingdata)" novalidate>
+    <div class="form-group">
+        <div class="btn-group">
+            <input type="radio" ng-model="settingdata.value" value="Income" ng-change='radioValue(settingdata.value)' checked=r equired /><b> Income </b>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" ng-model="settingdata.value" value="Expense" ng-change='radioValue(settingdata.value)' required/><b> Expense</b>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12 margin_20">
+        <select name="rucurring" class="form-control dropdown_category" ng-model="settingdata.rucurring" required>
+            <option>monthly</option>
+            <option>yearly</option>
+        </select>
+    </div>
+ 
+    <div class="col-lg-12 col-md-12 marginc_20">
+        <select name="category" class="form-control dropdown_category" ng-model="settingdata.category" required>
+            <option>Business</option>
+            <option>Share Market</option>
+            <option>Market</option>
+        </select>
+    </div>
+    <input type="submit" class="btn btn-primary" ngClick="Submit" value="Submit">
+</form>
+<br></br>
+</br>

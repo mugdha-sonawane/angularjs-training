@@ -1,0 +1,21 @@
+[{
+    "payer": "Purva",
+    "payee": "Anil",
+    "category": "Business",
+    "Date": "01-02-2016",
+    "ModeofPayment": "Bank",
+    "Amount": 5000,
+    "Notes": "Added amount",
+    "Type": "Expense"
+
+}, {
+    "payer": "prachi",
+    "payee": "Anuj",
+    "category": "Share Market",
+    "Date": "02-02-2016",
+    "ModeofPayment": "Cash",
+    "Amount": 400,
+    "Notes": "Added Cash",
+    "Type": "Expense"
+
+}]

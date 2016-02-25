@@ -1,0 +1,19 @@
+[{
+    "payer": "Mugdha",
+    "payee": "sayali",
+    "category": "Business",
+    "Date": "01-02-2016",
+    "ModeofPayment": "Bank",
+    "Amount": 2000,
+    "Notes": "Added amount",
+    "Type": "Income"
+}, {
+    "payer": "Rishi",
+    "payee": "Vidya",
+    "category": "Share Market",
+    "Date": "02-02-2016",
+    "ModeofPayment": "Cash",
+    "Amount": 300,
+    "Notes": "Added Cash",
+    "Type": "Income"
+}]
